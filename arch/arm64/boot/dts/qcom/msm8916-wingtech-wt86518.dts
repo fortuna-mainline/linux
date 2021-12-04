@@ -74,8 +74,15 @@
 	status = "okay";
 
 	model = "wt88047";
+	widgets =
+		"Speaker", "Speaker",
+		"Headphone", "Headphones";
+	pin-switches = "Speaker", "Headphones";
 	audio-routing =
-		"Speaker Amp IN", "HPH_R_EXT",
+		"Speaker", "Speaker Amp OUT",
+		"Speaker Amp IN", "HPH_R",
+		"Headphones", "Headphones Switch OUTL",
+		"Headphones", "Headphones Switch OUTR",
 		"Headphones Switch INL", "HPH_L",
 		"Headphones Switch INR", "HPH_R",
 		"AMIC1", "MIC BIAS Internal1",
